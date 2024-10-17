@@ -1,2 +1,27 @@
 @use "../../abstract/variable" as var;
 @use "../../abstract/mixins";
+
+#cards {
+    @include mixins.flex (row);
+    background-image: url(../img/about-bg.jpg);
+    color: white;
+    text-align: center;
+    padding: 0 5%;
+    padding-top: 200px;
+
+    .separateur {
+        margin: 2rem 0;
+    }
+    .card {
+        @include mixins.flex;
+        margin: 0 1rem;
+
+        .bg_logo {
+            @include mixins.logocard;
+        }
+        .btn {
+            @include mixins.button;
+            margin: 3rem 0;
+        }
+    }
+}

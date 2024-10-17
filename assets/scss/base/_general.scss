@@ -1,2 +1,16 @@
 @use "../abstract/variable" as var;
 @use "../abstract/mixins";
+
+body {
+    font-family:'Segoe UI';
+}
+
+.yellow {
+    color: var.$yellow;
+}
+.blue {
+    color: var.$blue;
+}
+.separateur {
+    @include mixins.splitter;
+}

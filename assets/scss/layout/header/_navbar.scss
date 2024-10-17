@@ -1,2 +1,32 @@
 @use "../../abstract/variable" as var;
 @use "../../abstract/mixins";
+
+#navbar {
+
+    color: white;
+    nav {
+        @include mixins.flex (row, space-around);
+        
+        h1 {
+            text-transform: uppercase;
+            font-size: 30px;
+
+            .yellow {
+                font-size: 36px;
+            }
+        }
+        ul {
+            @include mixins.flex (row);
+
+            a{
+                color: white;
+                padding: 0 1rem;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: var.$yellow;
+                }
+            }
+        }
+    }
+}

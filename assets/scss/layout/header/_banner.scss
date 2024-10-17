@@ -1,2 +1,29 @@
 @use "../../abstract/variable" as var;
 @use "../../abstract/mixins";
+
+#banner {
+    @include mixins.flex;
+    margin-top: 200px;
+    text-align: center;
+    color: white;
+
+    h2 {
+        font-size: 36px;
+
+        .h2blue {
+            color: var.$h2blue;
+        }
+        .h2orange {
+            text-transform: uppercase;
+            color: var.$h2orange;
+        }
+    }
+    p {
+        padding: 0 20%;
+        margin: 2rem 0;
+    }
+    .btn {
+        @include mixins.button (white, black);
+        margin-bottom: 250px;
+    }
+}

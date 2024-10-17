@@ -1,2 +1,54 @@
 @use "../../abstract/variable" as var;
 @use "../../abstract/mixins";
+
+#gallery {
+    display: flex;
+    color: white;
+
+    #sidebar {
+        @include mixins.flex ($items:left);
+        background-color: var.$blue;
+        width: 33%;
+
+        div {
+            @include mixins.flex ($items:left); 
+            margin-left: 20%;
+            margin-right: 10%;
+
+            h3 {
+                text-transform: uppercase;
+            }
+            .separateur {
+                margin: 1rem 0;
+            }
+            ul {
+                margin-top: 1rem;
+
+                li {
+                    margin: 0.5rem 0;
+
+                    &:first-child a{
+                        color: var.$yellow;
+                    }
+                    a {
+                        color: white;
+    
+                        
+                        &:hover {
+                            color: var.$yellow;
+                            text-decoration: underline;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #galleryimg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        margin: 2rem;
+    }
+}

@@ -1,2 +1,10 @@
 @use "../../abstract/variable" as var;
 @use "../../abstract/mixins";
+
+#temoignage {
+    background-color: var.$yellow;
+
+    .fondblanc {
+        background-color: white;
+    }
+}

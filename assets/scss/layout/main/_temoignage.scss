@@ -3,8 +3,36 @@
 
 #temoignage {
     background-color: var.$yellow;
+    @include mixins.flex;
+    padding: 6rem 30%;
+    text-align: center;
+    color: white;
 
     .fondblanc {
         background-color: white;
+
+        p {
+            color: black;
+            padding: 3%;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 20px;
+        }
+    }
+    div {
+        margin: 1rem 0;
+    }
+    .radio {
+        @include mixins.flex ($direction:row);
+
+        .circle {
+            @include mixins.circle;
+            margin: 0 0.5rem;
+            opacity: 0.5;
+
+            &:last-child{
+                opacity: 1;
+            }
+        }
     }
 }

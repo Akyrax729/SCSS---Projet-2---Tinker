@@ -14,3 +14,6 @@ body {
 .separateur {
     @include mixins.splitter;
 }
+.bold {
+    font-weight: 800;
+}

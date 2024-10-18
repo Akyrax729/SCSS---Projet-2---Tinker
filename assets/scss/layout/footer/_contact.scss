@@ -1,2 +1,18 @@
 @use "../../abstract/variable" as var;
 @use "../../abstract/mixins";
+
+#contact {
+    padding: 3% 30%;
+    @include mixins.flex;
+    text-align: center;
+    color: white;
+
+    .separateur {
+        margin: 1rem 0;
+        width: 70%;
+    }
+    .btn {
+        @include mixins.button;
+        margin-top: 3rem;
+    }
+}

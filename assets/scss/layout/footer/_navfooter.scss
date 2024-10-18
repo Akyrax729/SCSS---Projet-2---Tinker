@@ -1,2 +1,67 @@
 @use "../../abstract/variable" as var;
 @use "../../abstract/mixins";
+
+#footernav {
+    @include mixins.flex (row, space-around);
+    padding: 2rem 0;
+    color: white;
+
+    h3 {
+        text-transform: uppercase;
+        font-size: 30px;
+        color: white;
+
+        .yellow {
+            font-size: 36px;
+        }
+    }
+    h4 {
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+    }
+    .location {
+        display: flex;
+        flex-direction: column;
+
+        .separateur {
+            width: 1px;
+            height: 40px;
+            margin: 0 1rem;
+            background-color: rgb(134, 134, 134);
+        }
+        .adress {
+            @include mixins.flex(row);
+            
+        }
+    }
+    .infos {
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+    .social {
+        @include mixins.flex ($items:flex-start);
+
+        ul {
+            @include mixins.flex (row);
+
+            li {
+                padding: 0 0.2rem;
+
+                a {
+                    color: #373737;
+                    font-size: 20px;
+                    @include mixins.flex;
+                    background-color: white;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+
+                    &:hover {
+                        background-color: var.$yellow;
+                    }
+                }
+            }
+        }
+    }
+}

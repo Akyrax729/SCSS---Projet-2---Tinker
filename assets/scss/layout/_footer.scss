@@ -1,2 +1,12 @@
 @use "footer/contact";
 @use "footer/navfooter";
+
+footer {
+    background-color: #373B3C;
+    #map {
+        iframe {
+            width: 100%;
+            height: 60vh;
+        }
+    }
+}

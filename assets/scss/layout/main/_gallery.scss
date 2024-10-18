@@ -48,7 +48,32 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 1rem;
         margin: 2rem;
+    }
+}
+@media screen and (max-width:1024px) {
+    #gallery {
+        @include mixins.flex;
+
+        #sidebar {
+            @include mixins.flex;
+            text-align: center;
+            width: 100%;
+            padding: 2rem 0;
+            
+            div {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:800px) {
+    #gallery {
+        #galleryimg {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 1rem;
+        }
     }
 }

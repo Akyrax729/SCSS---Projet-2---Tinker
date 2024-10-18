@@ -3,13 +3,13 @@
 
 #temoignage {
     background-color: var.$yellow;
-    @include mixins.flex;
-    padding: 6rem 30%;
+    padding: 2rem 0;
     text-align: center;
     color: white;
 
     .fondblanc {
         background-color: white;
+        margin: 3% 20%;
 
         p {
             color: black;
@@ -17,11 +17,61 @@
             font-style: italic;
             font-weight: 300;
             font-size: 20px;
+            
         }
     }
     div {
         margin: 1rem 0;
     }
+    // .carrousel_temoignage {
+    //     @include mixins.flex (row);
+    //     overflow: show;
+    //     width: 100%;
+    //     height: 50vh;
+    //     animation: car_tem 20s infinite;
+    //     animation-fill-mode:forwards;  
+    //     animation-delay: 0ms; 
+    //     animation-timing-function: linear;
+    //     position: relative;
+
+    //     .tem_card {
+    //         position: relative;
+    //         width: 100%;
+    //         padding: 0 10%;
+    //         height: 100%;
+    //     }
+    // }
+    // @keyframes car_tem {
+    //     0% {
+    //         transform: translateX(0%);
+    //     }
+    //     20% {
+    //         transform: translatex(0%);
+    //     }
+    //     25% {
+    //         transform: translatex(-100%);
+    //     }
+    //     45% {
+    //         transform: translatex(-100%);
+    //     }
+    //     50% {
+    //         transform: translatex(-200%);
+    //     }
+    //     70% {
+    //         transform: translatex(-200%);
+    //     }
+    //     75% {
+    //         transform: translatex(-300%);
+    //     }
+    //     95% {
+    //         transform: translatex(-300%);
+    //     }
+    //     100% {
+    //         transform: translateX(-400%);
+    //     }
+    // }
+
+
     .radio {
         @include mixins.flex ($direction:row);
 
@@ -30,7 +80,7 @@
             margin: 0 0.5rem;
             opacity: 0.5;
 
-            &:last-child{
+            &:first-child {
                 opacity: 1;
             }
         }

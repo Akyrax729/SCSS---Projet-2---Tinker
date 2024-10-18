@@ -1,8 +1,13 @@
 @use "../abstract/variable" as var;
 @use "../abstract/mixins";
 
+@font-face {
+    font-family: "roboto";
+    src: url(../font/Roboto-Regular.ttf);
+}
+
 body {
-    font-family:'Segoe UI';
+    font-family:'roboto';
 }
 
 .yellow {

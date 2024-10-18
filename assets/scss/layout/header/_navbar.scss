@@ -15,6 +15,14 @@
             .yellow {
                 font-size: 36px;
             }
+           
+        }
+        #burger {
+            @include mixins.flex (row);
+
+            .burger {
+                @include mixins.burger;
+            }
         }
         ul {
             @include mixins.flex (row);
@@ -27,6 +35,35 @@
                 &:hover {
                     color: var.$yellow;
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px) {
+    #navbar {
+        nav {
+            #burger {
+                .burger {
+                    display: block;
+                }
+                &:hover ul {
+                    display: flex;
+                }
+                ul {
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 2.3rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.4);
+
+                    li {
+                        padding: 0.5rem 0;
+                    }
+                }
+                
             }
         }
     }
